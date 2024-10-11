@@ -1,0 +1,134 @@
+plugins:
+  group:server:
+    $collapsed: true
+    server:jw94sb:
+      port: 5140
+      maxPort: 5149
+      host: 0.0.0.0
+  group:basic:
+    $collapsed: true
+    commands:li2h9i:
+      wordlegame.开始.词影:
+        aliases:
+          词影: null
+      wordlegame.排行榜.词影.胜场:
+        aliases:
+          词影排行: null
+      wordlegame.排行榜.词影.最快用时:
+        aliases:
+          词影最快: null
+    help:ygy228: {}
+    http:8zhuiz: {}
+    inspect:t6s3k5: {}
+    locales:w1p0sy: {}
+    rate-limit:tphqsg: {}
+    telemetry:qb1b5d: {}
+  group:console:
+    $collapsed: true
+    actions:p8onf6: {}
+    analytics:adzm4e: {}
+    android:pxj3mb:
+      $if: env.KOISHI_AGENT?.includes('Android')
+    auth:71i3ay:
+      admin:
+        password: wb0000
+        username: ForkKILLET
+    config:qjz6tl: {}
+    console:vxd9jt:
+      open: true
+    dataview:md8rli: {}
+    desktop:sor8qw:
+      $if: env.KOISHI_AGENT?.includes('Desktop')
+    explorer:byc11b: {}
+    logger:hkfp89: {}
+    insight:puv8ed: {}
+    market:np9ipv:
+      search:
+        endpoint: https://koi.nyan.zone/registry/index.json
+      registry:
+        endpoint: https://registry.npmmirror.com
+    notifier:vdyln9: {}
+    oobe:o3rblm: {}
+    sandbox:582cka: {}
+    status:yp2spg: {}
+    theme-vanilla:vxumen: {}
+  group:storage:
+    database-mongo:igwwn3:
+      database: koishi
+      username: willbot
+      password: wb0000
+      host: genshin.asm.ms
+      port: 27017
+    assets-local:n659j5: {}
+  group:develop:
+    hmr:r9rgwl:
+      root: .
+    $if: env.NODE_ENV === 'development'
+    w-dice:or2ef9: {}
+    ~w-5dc:exmpv9: {}
+    w-udgt:hdysjs: {}
+    w-debug:j1q81a: {}
+    w-reactive:uu81wf: {}
+    w-repeat:4us2fk:
+      repeatCount: 3
+      displayLength: 20
+      repeatBlacklist:
+        - ^w&gt;
+        - ^x&gt;
+        - ^\.
+        - ^,
+      doProcessImage: true
+      doOcr: false
+      doWrite: false
+    w-option-conflict:1ps7sc: {}
+    w-echarts:vi2w5c: {}
+    w-test:tc0f3x: {}
+    w-node:2gkmkn:
+      packagePath: /home/forkkillet/.cache/w-node
+      registry: https://registry.npmjs.org
+      proxyPrefix: proxychains4 -q
+    w-tesseract:zh5yqc: {}
+    ~w-parser:hja3l9: {}
+    ~w-parser-control:2iey6h: {}
+    w-subscribe:mdegcw:
+      doWrite: false
+    w-subscribe-at:pfwdu5: {}
+    w-subscribe-common:2qj3gy: {}
+    w-subscribe-quote:tk918o: {}
+    w-as-forward:7p26hu:
+      minLength: 100
+    w-zlibrary:9yxd5c: {}
+  group:tsnj3c:
+    admin:po8wkt: {}
+    $label: admin
+  group:wnqk9g:
+    ffmpeg:vgxlbd: {}
+    downloads:tj18ge: {}
+    callme:qehbjt: {}
+    echo:mp8x0a: {}
+    mcping:1kkm5o: {}
+    wordle-game:q63vmx: {}
+    $label: misc
+    monetary:c764ta: {}
+    dialogue:ydf21d: {}
+    glot:mab8qm:
+      apiToken: ${{ env.GLOT_API_TOKEN }}
+    group:bove5g:
+      $label: puppeteer
+      isolate:e59gep:
+        isolatedServices:
+          - canvas
+      ~puppeteer:rmc7m1: {}
+    screenshot:dr8kub:
+      loadTimeout: 50000
+    sudo:n8qxik: {}
+  group:ce9hsv:
+    $label: adapter
+    adapter-onebot:yie5cp:
+      selfId: '3825175885'
+      token: wb0000
+      protocol: ws
+      endpoint: ws://genshin.asm.ms:3001
+prefixMode: strict
+prefix:
+  - w>
