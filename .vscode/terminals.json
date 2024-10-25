@@ -1,6 +1,4 @@
 {
-  "autorun": true,
-  "terminals": [
-
-  ]
+  "autorun": false,
+  "terminals": []
 }

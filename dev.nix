@@ -7,6 +7,7 @@ mkShell {
   ];
 
   shellHook = ''
+    export TZ="Asia/Shanghai"
     yarn dev
   '';
 }

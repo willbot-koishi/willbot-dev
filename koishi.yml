@@ -44,9 +44,9 @@ plugins:
     insight:puv8ed: {}
     market:np9ipv:
       search:
-        endpoint: https://koi.nyan.zone/registry/index.json
+        endpoint: https://registry.koishi.t4wefan.pub/index.json
       registry:
-        endpoint: https://registry.npmmirror.com
+        endpoint: https://registry.npmmirror.com/
     notifier:vdyln9: {}
     oobe:o3rblm: {}
     sandbox:582cka: {}
@@ -97,7 +97,29 @@ plugins:
     w-subscribe-quote:tk918o: {}
     w-as-forward:7p26hu:
       minLength: 100
-    w-zlibrary:9yxd5c: {}
+    w-zlibrary:9yxd5c:
+      cookie: >-
+        siteLanguage=zh; remix_userkey=439f601964a1fd43303713d804d8a8af;
+        remix_userid=37374869; selectedSiteMode=books
+    w-openrouter:uocznc:
+      apiKey: >-
+        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
+      rankUrl: https://github.com/willbot-koishi/
+      rankName: WillBot Dev
+      model: liquid/lfm-40b:free
+      defaultModel: liquid/lfm-40b:free
+    w-tree:opagxn:
+      maxDepth: 3
+      style: asciiex
+      customCss:
+        padding: 1em
+        line-height: '1.2'
+        font-feature-settings: '''liga'' on'
+        font-family: '''Jetbrains Mono'', monospace'
+        color: '#fff'
+        background-color: '#000'
+    w-jieba:g07o4s: {}
+    w-as-slices:yiez0x: {}
   group:tsnj3c:
     admin:po8wkt: {}
     $label: admin
@@ -110,15 +132,10 @@ plugins:
     wordle-game:q63vmx: {}
     $label: misc
     monetary:c764ta: {}
-    dialogue:ydf21d: {}
+    ~dialogue:ydf21d: {}
+    puppeteer:rmc7m1: {}
     glot:mab8qm:
       apiToken: ${{ env.GLOT_API_TOKEN }}
-    group:bove5g:
-      $label: puppeteer
-      isolate:e59gep:
-        isolatedServices:
-          - canvas
-      ~puppeteer:rmc7m1: {}
     screenshot:dr8kub:
       loadTimeout: 50000
     sudo:n8qxik: {}
@@ -131,4 +148,5 @@ plugins:
       endpoint: ws://genshin.asm.ms:3001
 prefixMode: strict
 prefix:
-  - w>
+  - x>
+timezoneOffset: -480
