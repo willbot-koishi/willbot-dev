@@ -1,12 +1,10 @@
 plugins:
   group:server:
-    $collapsed: true
     server:jw94sb:
       port: 5140
       maxPort: 5149
       host: 0.0.0.0
   group:basic:
-    $collapsed: true
     commands:li2h9i:
       wordlegame.开始.词影:
         aliases:
@@ -23,25 +21,28 @@ plugins:
     locales:w1p0sy: {}
     rate-limit:tphqsg: {}
     telemetry:qb1b5d: {}
+    proxy-agent:pfe9y3: {}
   group:console:
-    $collapsed: true
-    actions:p8onf6: {}
     analytics:adzm4e: {}
+    actions:p8onf6: {}
     android:pxj3mb:
       $if: env.KOISHI_AGENT?.includes('Android')
     auth:71i3ay:
       admin:
         password: wb0000
         username: ForkKILLET
-    config:qjz6tl: {}
+    dataview:md8rli: {}
     console:vxd9jt:
       open: true
-    dataview:md8rli: {}
+      head:
+        - tag: title
+          content: x
+    config:qjz6tl: {}
     desktop:sor8qw:
       $if: env.KOISHI_AGENT?.includes('Desktop')
     explorer:byc11b: {}
-    logger:hkfp89: {}
     insight:puv8ed: {}
+    logger:hkfp89: {}
     market:np9ipv:
       search:
         endpoint: https://registry.koishi.t4wefan.pub/index.json
@@ -80,9 +81,29 @@ plugins:
       doProcessImage: true
       doOcr: false
       doWrite: false
+      segmentationBlacklist:
+        - 的
+        - 我
+        - 了
+        - 是
+        - 你
+        - 不
+        - 在
+        - 吗
+        - 就
+        - 都
+        - 有
+        - 啊
+        - 也
+        - 和
+        - 什么
+        - 怎么
+        - 说
+        - 人
+      segmentationTagBlacklist:
+        - x
     w-option-conflict:1ps7sc: {}
     w-echarts:vi2w5c: {}
-    w-test:tc0f3x: {}
     w-node:2gkmkn:
       packagePath: /home/forkkillet/.cache/w-node
       registry: https://registry.npmjs.org
@@ -95,12 +116,9 @@ plugins:
     w-subscribe-at:pfwdu5: {}
     w-subscribe-common:2qj3gy: {}
     w-subscribe-quote:tk918o: {}
+    w-as-slices:yiez0x: {}
     w-as-forward:7p26hu:
       minLength: 100
-    w-zlibrary:9yxd5c:
-      cookie: >-
-        siteLanguage=zh; remix_userkey=439f601964a1fd43303713d804d8a8af;
-        remix_userid=37374869; selectedSiteMode=books
     w-openrouter:uocznc:
       apiKey: >-
         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
@@ -118,8 +136,16 @@ plugins:
         font-family: '''Jetbrains Mono'', monospace'
         color: '#fff'
         background-color: '#000'
+    w-canvas:3jbya8: {}
     w-jieba:g07o4s: {}
-    w-as-slices:yiez0x: {}
+    group:o8uddu:
+      ~w-zlibrary:9yxd5c:
+        cookie: >-
+          siteLanguage=zh; remix_userkey=439f601964a1fd43303713d804d8a8af;
+          remix_userid=37374869; selectedSiteMode=books
+      $label: 'proxy: w-zlibrary'
+      isolate:eoenkc:
+        proxyAgent: http://127.0.0.1:1643
   group:tsnj3c:
     admin:po8wkt: {}
     $label: admin
@@ -132,13 +158,17 @@ plugins:
     wordle-game:q63vmx: {}
     $label: misc
     monetary:c764ta: {}
-    ~dialogue:ydf21d: {}
-    puppeteer:rmc7m1: {}
     glot:mab8qm:
       apiToken: ${{ env.GLOT_API_TOKEN }}
     screenshot:dr8kub:
       loadTimeout: 50000
     sudo:n8qxik: {}
+    group:fxl83w:
+      ~puppeteer:rmc7m1: {}
+      $label: 'isolate: puppeteer'
+      isolate:nip1nr:
+        isolatedServices:
+          - canvas
   group:ce9hsv:
     $label: adapter
     adapter-onebot:yie5cp:
