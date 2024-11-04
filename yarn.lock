@@ -6053,6 +6053,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/wordcloud@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@types/wordcloud@npm:1.2.2"
+  checksum: 10c0/37c82d73c991505345ff80e81a33ba93995f5d8975f3ef768a27b238889fea44c5132037e7f58bbe986005303675e33f0ba1996c13db26c99c8f80b471b6e377
+  languageName: node
+  linkType: hard
+
 "@types/ws@npm:^8.5.10":
   version: 8.5.12
   resolution: "@types/ws@npm:8.5.12"
@@ -16156,6 +16163,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"koishi-plugin-assets-remote@npm:2.2.2, koishi-plugin-assets-remote@npm:^2.2.2":
+  version: 2.2.2
+  resolution: "koishi-plugin-assets-remote@npm:2.2.2"
+  dependencies:
+    "@koishijs/assets": "npm:^1.1.2"
+  peerDependencies:
+    koishi: ^4.17.7
+  checksum: 10c0/4b700938ebe93e7c53a0334e1df0cd8fa23a13180d68771f2706b68973c8033e9c9afe4656716f916fee0ff02549f2e3da4f8014ffe4cb58dcd79985b49d0b6d
+  languageName: node
+  linkType: hard
+
 "koishi-plugin-dataview@npm:^2.7.5":
   version: 2.7.5
   resolution: "koishi-plugin-dataview@npm:2.7.5"
@@ -16339,6 +16357,27 @@ __metadata:
   resolution: "koishi-plugin-w-as-slices@workspace:external/w-as-slices"
   dependencies:
     "@satorijs/element": "npm:^3.1.7"
+  peerDependencies:
+    koishi: ^4.18.0
+  languageName: unknown
+  linkType: soft
+
+"koishi-plugin-w-assets-local@workspace:external/w-assets-local":
+  version: 0.0.0-use.local
+  resolution: "koishi-plugin-w-assets-local@workspace:external/w-assets-local"
+  dependencies:
+    "@koishijs/plugin-server": "npm:^3.2.4"
+    koishi-plugin-assets-local: "npm:^3.3.2"
+  peerDependencies:
+    koishi: ^4.18.0
+  languageName: unknown
+  linkType: soft
+
+"koishi-plugin-w-assets-remote@workspace:^, koishi-plugin-w-assets-remote@workspace:external/w-assets-remote":
+  version: 0.0.0-use.local
+  resolution: "koishi-plugin-w-assets-remote@workspace:external/w-assets-remote"
+  dependencies:
+    koishi-plugin-assets-remote: "npm:^2.2.2"
   peerDependencies:
     koishi: ^4.18.0
   languageName: unknown
@@ -16564,6 +16603,10 @@ __metadata:
 "koishi-plugin-w-wordcloud@workspace:external/w-wordcloud":
   version: 0.0.0-use.local
   resolution: "koishi-plugin-w-wordcloud@workspace:external/w-wordcloud"
+  dependencies:
+    "@types/wordcloud": "npm:^1.2.2"
+    koishi-plugin-w-canvas: "workspace:^"
+    wordcloud: "npm:^1.2.2"
   peerDependencies:
     koishi: ^4.18.0
   languageName: unknown
@@ -16577,6 +16620,7 @@ __metadata:
     cheerio: "npm:^1.0.0"
     koishi-plugin-w-as-forward: "workspace:^"
     koishi-plugin-w-as-slices: "workspace:^"
+    koishi-plugin-w-assets-remote: "workspace:^"
   peerDependencies:
     koishi: ^4.18.0
   languageName: unknown
@@ -24687,6 +24731,7 @@ __metadata:
     koishi: "npm:^4.18.0"
     koishi-plugin-adapter-onebot: "npm:^6.7.2"
     koishi-plugin-assets-local: "npm:^3.3.2"
+    koishi-plugin-assets-remote: "npm:2.2.2"
     koishi-plugin-dataview: "npm:^2.7.5"
     koishi-plugin-desktop: "npm:^1.0.0"
     koishi-plugin-dialogue: "npm:^4.1.3"
@@ -24725,6 +24770,13 @@ __metadata:
   version: 1.2.5
   resolution: "word-wrap@npm:1.2.5"
   checksum: 10c0/e0e4a1ca27599c92a6ca4c32260e8a92e8a44f4ef6ef93f803f8ed823f486e0889fc0b93be4db59c8d51b3064951d25e43d434e95dc8c960cc3a63d65d00ba20
+  languageName: node
+  linkType: hard
+
+"wordcloud@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "wordcloud@npm:1.2.2"
+  checksum: 10c0/d49734b1b75003957ad2e3abfffd52c4559dcb221dd1f87ce628ca418d2e90f74065fc097f2f3a672e4ce7f15f093c52f51683b1bcfad8b9b3a8751d276010f3
   languageName: node
   linkType: hard
 

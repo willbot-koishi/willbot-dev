@@ -29,7 +29,7 @@ plugins:
       $if: env.KOISHI_AGENT?.includes('Android')
     auth:71i3ay:
       admin:
-        password: wb0000
+        password: ${{ env.AUTH_PASSWD }}
         username: ForkKILLET
     dataview:md8rli: {}
     console:vxd9jt:
@@ -60,7 +60,6 @@ plugins:
       password: wb0000
       host: genshin.asm.ms
       port: 27017
-    assets-local:n659j5: {}
   group:develop:
     hmr:r9rgwl:
       root: .
@@ -146,6 +145,18 @@ plugins:
       $label: 'proxy: w-zlibrary'
       isolate:eoenkc:
         proxyAgent: http://127.0.0.1:1643
+    w-assets-remote:nknmdm:
+      endpoint: http://genshin.asm.ms:5140/files
+      secret: ${{ env.ASSETS_SECRET }}
+    ~group:2px0aw:
+      ~w-assets-local:csrmwc:
+        secret: test
+        selfUrl: http://127.0.0.1:5140
+      $label: 'test: w-assets-local'
+      isolate:fuw9ol:
+        isolatedServices:
+          - assets
+          - assetsAlt
   group:tsnj3c:
     admin:po8wkt: {}
     $label: admin
@@ -173,7 +184,7 @@ plugins:
     $label: adapter
     adapter-onebot:yie5cp:
       selfId: '3825175885'
-      token: wb0000
+      token: ${{ env.ONEBOT_TOKEN }}
       protocol: ws
       endpoint: ws://genshin.asm.ms:3001
 prefixMode: strict
